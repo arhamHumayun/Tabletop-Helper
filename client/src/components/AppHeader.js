@@ -15,7 +15,7 @@ class AppHeader extends Component {
                 <NavDropdown.Item href="#generate/coc">Call of Cthulu 7e</NavDropdown.Item>
                 <NavDropdown.Item href="#generate/pf">Pathfinder 2e</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                <NavDropdown.Item href="#pointbuy/dnd">Dnd 5e Point Buy</NavDropdown.Item>
               </NavDropdown>
             </Nav>
         </Navbar>
