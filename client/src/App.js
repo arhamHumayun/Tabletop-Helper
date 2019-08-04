@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <AppHeader/>
       <Dice diceSize={20}/>
+      <Dice diceSize={100}/>
     </div>
   );
 }
