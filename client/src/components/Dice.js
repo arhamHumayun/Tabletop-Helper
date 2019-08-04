@@ -23,20 +23,19 @@ export default class Dice extends Component {
     render() {
         return (
             <div>
-            <Container style={{border: '1px solid red'}}>
-                <Row>
-                    <Col xs={1} style={{border: '1px solid red'}}>
-                        <Button variant="primary" onClick={this.roll} block>Roll</Button> 
-                    </Col>
-                    <Col xs={3} style={{border: '1px solid red'}}>
-                        <h1>1D{this.state.diceSize} =</h1>
-                    </Col>
-                    <Col xs={1} style={{border: '1px solid red'}}>
-                        <h1>{this.state.result}</h1> 
-                    </Col>
-                </Row>
-            </Container>
-    
+                <Container>
+                    <Row>
+                        <Col xs={1}>
+                            <Button variant="primary" onClick={this.roll} size="lg" className="btn btn-primary btn-lg btn-block" block>Roll</Button> 
+                        </Col>
+                        <Col xs={2}>
+                            <h2>1D{this.state.diceSize} =</h2>
+                        </Col>
+                        <Col xs={1}>
+                            <h2>{this.state.result}</h2> 
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         )
     }
