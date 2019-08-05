@@ -43,17 +43,17 @@ export default class Dice extends Component {
         return (
             <React.Fragment>
                 <Container style={{border: '2px solid blue'}}>
-                    <Row>
-                        <Col md="auto">
+                    <Row style={{}} >
+                        <Col md={{span: 1.5}}>
                             <Button variant="primary" onClick={this.roll} size="lg" className="btn btn-primary btn-lg btn-block" block>Roll</Button> 
                         </Col >
-                        <Col md={2}>
+                        <Col md={{span: 2}}>
                             <h4 style={{width: "100%"}} >1D{this.state.diceSize} + </h4>
                         </Col>
-                        <Col md={1}>
+                        <Col md={{span: 1}}>
                             <input type="number" value={this.state.inputValue} onChange={this._handleUpdate} step="any" style={{width: "100%", height: '80%'}}/>
                         </Col>
-                        <Col md={1}>
+                        <Col md={{span: 2}}>
                             <h2>= {this.state.finalResult}</h2> 
                         </Col>
                     </Row>
