@@ -5,7 +5,7 @@ import DicePage from './DicePage';
 import SplashScreen from './SplashScreen';
 
 const Main = () => (
-    <main style={{border: '2px solid red', height: '100%'}} >
+    <main style={{height: '100%'}} >
         <Switch>
             <Route exact path ='/' component={SplashScreen}/>
             <Route exact path ='/dice' component={DicePage}/>

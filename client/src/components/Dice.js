@@ -14,6 +14,7 @@ export default class Dice extends Component {
             finalResult: 0,
             inputValue: "0"
         }
+
         this.roll = this.roll.bind(this);
         this._handleUpdate = this._handleUpdate.bind(this);
         this._reset = this._reset.bind(this);
@@ -41,19 +42,18 @@ export default class Dice extends Component {
     render() {
         return (
             <React.Fragment>
-                <Container>
+                <Container style={{border: '2px solid blue'}}>
                     <Row>
                         <Col md="auto">
                             <Button variant="primary" onClick={this.roll} size="lg" className="btn btn-primary btn-lg btn-block" block>Roll</Button> 
                         </Col >
                         <Col md={2}>
-                            <h4>1D{this.state.diceSize} + </h4>
+                            <h4 style={{width: "100%"}} >1D{this.state.diceSize} + </h4>
                         </Col>
-                        <Col md={4}>
-                            <input type="number" value={this.state.inputValue} onChange={this._handleUpdate} step="any" />
-                            <button onClick={this._reset}>reset</button>
+                        <Col md={1}>
+                            <input type="number" value={this.state.inputValue} onChange={this._handleUpdate} step="any" style={{width: "100%", height: '80%'}}/>
                         </Col>
-                        <Col md={2}>
+                        <Col md={1}>
                             <h2>= {this.state.finalResult}</h2> 
                         </Col>
                     </Row>
