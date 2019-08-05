@@ -4,7 +4,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
-import NumericInput from './NumericInput'
 
 export default class Dice extends Component {
     constructor(props) {
@@ -55,7 +54,7 @@ export default class Dice extends Component {
                             <button onClick={this._reset}>reset</button>
                         </Col>
                         <Col md={2}>
-                            <h4>= {this.state.finalResult}</h4> 
+                            <h2>= {this.state.finalResult}</h2> 
                         </Col>
                     </Row>
                 </Container>
