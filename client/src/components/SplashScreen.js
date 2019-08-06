@@ -4,6 +4,7 @@ export default class SplashScreen extends Component {
     render() {
         return (
             <div>
+                <p></p>
                 <h2>
                     Welcome to Tabletop Helper!
                 </h2>

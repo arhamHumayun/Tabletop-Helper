@@ -24,9 +24,9 @@ export default class CoCStats extends Component {
                 this.state.statArray[i] = (results[0] + results[1] + results[2]) * 5
                 this.state.rollsArray[i] = "(" + results[0] + " + " + results[1] + " + " + results[2] + ") * 5"
             }
-            for(var i = 0; i < 2; i++) {
+            for(var i = 0; i < 3; i++) {
                 results = [0, 0]
-                for(var j = 0; j < 3; j++) {
+                for(var j = 0; j < 2; j++) {
                     results[j] = Math.floor((Math.random() * 6) + 1)
                 }
                 this.state.statArray[i + 6] = (results[0] + results[1] + 6) * 5
