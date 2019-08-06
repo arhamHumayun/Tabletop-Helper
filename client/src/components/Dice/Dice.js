@@ -52,7 +52,7 @@ export default class Dice extends Component {
                             <input type="number" value={this.state.inputValue} onChange={this.handleUpdate} step="any" style={{width: "100%", height: '80%'}}/>
                         </Col>
                         <Col md={{span: 2}}>
-                            <h2>= {this.state.finalResult}</h2> 
+                            <h3>= {this.state.finalResult}</h3> 
                         </Col>
                     </Row>
                 </Container>
