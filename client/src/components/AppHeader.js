@@ -17,6 +17,7 @@ export default class AppHeader extends Component {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/pointbuy/dnd">Dnd 5e Point Buy</NavDropdown.Item>
               </NavDropdown>
+              <Nav.Link href="/curations">Curations</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link href="/about" inline>About</Nav.Link>
