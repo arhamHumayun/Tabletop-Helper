@@ -16,7 +16,7 @@ export default class CoCStats extends Component {
 
     generateStandard() {
             var results = [0, 0, 0]
-            for(var i = 0; i < 7; i++) {
+            for(var i = 0; i < 6; i++) {
                 results = [0, 0, 0]
                 for(var j = 0; j < 3; j++) {
                     results[j] = Math.floor((Math.random() * 6) + 1)
@@ -26,11 +26,11 @@ export default class CoCStats extends Component {
             }
             for(var i = 0; i < 2; i++) {
                 results = [0, 0]
-                for(var j = 0; j < 2; j++) {
+                for(var j = 0; j < 3; j++) {
                     results[j] = Math.floor((Math.random() * 6) + 1)
                 }
-                this.state.statArray[i + 7] = (results[0] + results[1] + 6) * 5
-                this.state.rollsArray[i + 7] = "(" + results[0] + " + " + results[1] + " + (6)) * 5"
+                this.state.statArray[i + 6] = (results[0] + results[1] + 6) * 5
+                this.state.rollsArray[i + 6] = "(" + results[0] + " + " + results[1] + " + (6)) * 5"
             }
             this.forceUpdate()
     }
@@ -70,26 +70,51 @@ export default class CoCStats extends Component {
                             <th>Rolls:</th>
                             <th>{this.state.rollsArray[0]}</th>
                             <th>{this.state.rollsArray[1]}</th>
+                            <th>{this.state.rollsArray[6]}</th>
                             <th>{this.state.rollsArray[2]}</th>
                             <th>{this.state.rollsArray[3]}</th>
                             <th>{this.state.rollsArray[4]}</th>
-                            <th>{this.state.rollsArray[5]}</th>
                             <th>{this.state.rollsArray[7]}</th>
                             <th>{this.state.rollsArray[8]}</th>
-                            <th>{this.state.rollsArray[6]}</th>
+                            <th>{this.state.rollsArray[5]}</th>
                         </tr>
                         <tr>
                             <th>Results:</th>
                             <th>{this.state.statArray[0]}</th>
                             <th>{this.state.statArray[1]}</th>
+                            <th>{this.state.statArray[6]}</th>
                             <th>{this.state.statArray[2]}</th>
                             <th>{this.state.statArray[3]}</th>
                             <th>{this.state.statArray[4]}</th>
-                            <th>{this.state.statArray[5]}</th>
                             <th>{this.state.statArray[7]}</th>
                             <th>{this.state.statArray[8]}</th>
-                            <th>{this.state.statArray[6]}</th>
+                            <th>{this.state.statArray[5]}</th>
                         </tr>
+                        <tr>
+                            <th>Results 1/2:</th>
+                            <th>{Math.floor(this.state.statArray[0] / 2)}</th>
+                            <th>{Math.floor(this.state.statArray[1] / 2)}</th>
+                            <th>{Math.floor(this.state.statArray[6] / 2)}</th>
+                            <th>{Math.floor(this.state.statArray[2] / 2)}</th>
+                            <th>{Math.floor(this.state.statArray[3] / 2)}</th>
+                            <th>{Math.floor(this.state.statArray[4] / 2)}</th>
+                            <th>{Math.floor(this.state.statArray[7] / 2)}</th>
+                            <th>{Math.floor(this.state.statArray[8] / 2)}</th>
+                            <th>{Math.floor(this.state.statArray[5] / 2)}</th>
+                        </tr>
+                        <tr>
+                            <th>Results 1/5:</th>
+                            <th>{Math.floor(this.state.statArray[0] / 5)}</th>
+                            <th>{Math.floor(this.state.statArray[1] / 5)}</th>
+                            <th>{Math.floor(this.state.statArray[6] / 5)}</th>
+                            <th>{Math.floor(this.state.statArray[2] / 5)}</th>
+                            <th>{Math.floor(this.state.statArray[3] / 5)}</th>
+                            <th>{Math.floor(this.state.statArray[4] / 5)}</th>
+                            <th>{Math.floor(this.state.statArray[7] / 5)}</th>
+                            <th>{Math.floor(this.state.statArray[8] / 5)}</th>
+                            <th>{Math.floor(this.state.statArray[5] / 5)}</th>
+                        </tr>
+                        
                     </tbody>
                 </Table>
             </div>

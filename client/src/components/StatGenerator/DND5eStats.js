@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
+import  Overlay from 'react-bootstrap/Overlay'
+import  OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Tooltip from 'react-bootstrap/Tooltip'
 
 export default class DND5eStats extends Component {
     constructor(props) {
@@ -13,7 +17,7 @@ export default class DND5eStats extends Component {
         this.generate4D6DL = this.generate4D6DL.bind(this)
         this.generate3D6 = this.generate3D6.bind(this)
         this.generate2D6plus6 = this.generate2D6plus6.bind(this)
-        console.log('1'.strike)
+        this.showStandardArray = this.showStandardArray.bind(this)
     }
 
     generate4D6DL() {
@@ -26,9 +30,7 @@ export default class DND5eStats extends Component {
                 results.sort()
                 this.state.statArray[i] = results[1] + results[2] + results[3]
                 this.state.rollsArray[i] = results[0] + " | " + results[1] + " + " + results[2] + " + " + results[3]
-                
             }
-            //console.log(this.state.statArray)
             this.forceUpdate()
     }
 
@@ -58,14 +60,34 @@ export default class DND5eStats extends Component {
         this.forceUpdate()
     }
 
+    showStandardArray() {
+        this.setState({ 
+            statArray: [15, 14, 13 , 12, 10, 8],
+            rollsArray: ["", "", "", "", "", ""]
+        })
+    }
+
     render() {
         return (
             <div>
-                <ButtonGroup>
-                    <Button variant="primary" onClick={this.generate4D6DL}>4D6 drop lowest</Button>
-                    <Button variant="primary" onClick={this.generate3D6}>3D6</Button>
-                    <Button variant="primary" onClick={this.generate2D6plus6}>2D6 + 6</Button>
-                </ButtonGroup> 
+                <ButtonToolbar aria-label="Toolbar with button groups">
+                <div style={{width: '38%'}}></div>
+                    <ButtonGroup>
+                        <Button variant="primary" onClick={this.generate4D6DL}>4D6 drop lowest</Button>
+                        <Button variant="primary" onClick={this.generate3D6}>3D6</Button>
+                        <Button variant="primary" onClick={this.generate2D6plus6}>2D6 + 6</Button>
+                    </ButtonGroup> 
+                    <div style={{width: '1%'}}></div>
+                    <ButtonGroup>
+                        <OverlayTrigger key='right ' placement='right' overlay={
+                            <Tooltip id={`tooltip-${'right'}`}>
+                                Standard array can be found in page 13 of the PHB.
+                            </Tooltip>
+                        }>
+                            <Button variant="primary" onClick={this.showStandardArray}>Standard Array</Button>
+                        </OverlayTrigger>
+                    </ButtonGroup>
+                </ButtonToolbar>
                 <Table bordered hover>
                     <thead>
                         <tr>
@@ -89,7 +111,7 @@ export default class DND5eStats extends Component {
                             <th>{this.state.rollsArray[5]}</th>
                         </tr>
                         <tr>
-                            <th>Results: </th>
+                            <th>Results:</th>
                             <th>{this.state.statArray[0]}</th>
                             <th>{this.state.statArray[1]}</th>
                             <th>{this.state.statArray[2]}</th>
