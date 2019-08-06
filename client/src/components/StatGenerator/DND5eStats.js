@@ -46,7 +46,6 @@ export default class DND5eStats extends Component {
     }
 
     generate2D6plus6() {
-        console.log('am i fat')
         var results = [0, 0]
         for(var i = 0; i < 6; i++) {
             results = [0, 0]
@@ -67,7 +66,7 @@ export default class DND5eStats extends Component {
                     <Button variant="primary" onClick={this.generate3D6}>3D6</Button>
                     <Button variant="primary" onClick={this.generate2D6plus6}>2D6 + 6</Button>
                 </ButtonGroup> 
-                <Table>
+                <Table bordered hover>
                     <thead>
                         <tr>
                             <th>#</th>
@@ -81,15 +80,6 @@ export default class DND5eStats extends Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <th>Results: </th>
-                            <th>{this.state.statArray[0]}</th>
-                            <th>{this.state.statArray[1]}</th>
-                            <th>{this.state.statArray[2]}</th>
-                            <th>{this.state.statArray[3]}</th>
-                            <th>{this.state.statArray[4]}</th>
-                            <th>{this.state.statArray[5]}</th>
-                        </tr>
-                        <tr>
                             <th>Rolls:</th>
                             <th>{this.state.rollsArray[0]}</th>
                             <th>{this.state.rollsArray[1]}</th>
@@ -97,6 +87,15 @@ export default class DND5eStats extends Component {
                             <th>{this.state.rollsArray[3]}</th>
                             <th>{this.state.rollsArray[4]}</th>
                             <th>{this.state.rollsArray[5]}</th>
+                        </tr>
+                        <tr>
+                            <th>Results: </th>
+                            <th>{this.state.statArray[0]}</th>
+                            <th>{this.state.statArray[1]}</th>
+                            <th>{this.state.statArray[2]}</th>
+                            <th>{this.state.statArray[3]}</th>
+                            <th>{this.state.statArray[4]}</th>
+                            <th>{this.state.statArray[5]}</th>
                         </tr>
                     </tbody>
                 </Table>
