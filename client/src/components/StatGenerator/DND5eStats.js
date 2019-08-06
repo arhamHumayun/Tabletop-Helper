@@ -3,8 +3,7 @@ import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
-import  Overlay from 'react-bootstrap/Overlay'
-import  OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
 
 export default class DND5eStats extends Component {
