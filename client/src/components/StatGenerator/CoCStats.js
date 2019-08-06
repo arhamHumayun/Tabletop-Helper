@@ -11,6 +11,7 @@ export default class CoCStats extends Component {
             rollsArray: ["", "", "", "", "", "", "", "", ""]
         }
         this.generateStandard = this.generateStandard.bind(this)
+        this.generate1D100 = this.generate1D100.bind(this)
     }
 
     generateStandard() {
@@ -34,6 +35,14 @@ export default class CoCStats extends Component {
             this.forceUpdate()
     }
 
+    generate1D100() {
+        for(var i = 0; i < 9; i++) {
+            this.state.statArray[i] = Math.floor((Math.random() * 100) + 1)
+            this.state.rollsArray[i] = this.state.statArray[i]
+        }
+        this.forceUpdate()
+    }
+
     render() {
         return (
             <div>
@@ -44,16 +53,16 @@ export default class CoCStats extends Component {
                 <Table bordered hover>
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>Stat:</th>
                             <th>STR</th>
                             <th>CON</th>
                             <th>SIZ</th>
                             <th>DEX</th>
                             <th>APP</th>
                             <th>POW</th>
-                            <th>LUCK</th>
                             <th>INT</th>
                             <th>EDU</th>
+                            <th>LUCK</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -65,9 +74,9 @@ export default class CoCStats extends Component {
                             <th>{this.state.rollsArray[3]}</th>
                             <th>{this.state.rollsArray[4]}</th>
                             <th>{this.state.rollsArray[5]}</th>
-                            <th>{this.state.rollsArray[6]}</th>
                             <th>{this.state.rollsArray[7]}</th>
                             <th>{this.state.rollsArray[8]}</th>
+                            <th>{this.state.rollsArray[6]}</th>
                         </tr>
                         <tr>
                             <th>Results:</th>
@@ -77,9 +86,9 @@ export default class CoCStats extends Component {
                             <th>{this.state.statArray[3]}</th>
                             <th>{this.state.statArray[4]}</th>
                             <th>{this.state.statArray[5]}</th>
-                            <th>{this.state.statArray[6]}</th>
                             <th>{this.state.statArray[7]}</th>
                             <th>{this.state.statArray[8]}</th>
+                            <th>{this.state.statArray[6]}</th>
                         </tr>
                     </tbody>
                 </Table>
