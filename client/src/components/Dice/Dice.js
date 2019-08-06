@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Form from 'react-bootstrap/Form'
 
 export default class Dice extends Component {
     constructor(props) {
@@ -16,8 +15,8 @@ export default class Dice extends Component {
         }
 
         this.roll = this.roll.bind(this);
-        this._handleUpdate = this._handleUpdate.bind(this);
-        this._reset = this._reset.bind(this);
+        this._handleUpdate = this.handleUpdate.bind(this);
+        this._reset = this.reset.bind(this);
     }
 
     roll() {
@@ -29,20 +28,20 @@ export default class Dice extends Component {
         }))
     }
 
-    _handleUpdate(e) {
+    handleUpdate(e) {
         if (e.target.validity.valid) {
           this.setState({ inputValue: e.target.value }); 
         }
       }
     
-      _reset() {
+    reset() {
         this.setState({ inputValue: "0" }); 
       }
 
     render() {
         return (
             <React.Fragment>
-                <Container style={{border: '2px solid blue'}}>
+                <Container>
                     <Row style={{}} >
                         <Col md={{span: 1.5}}>
                             <Button variant="primary" onClick={this.roll} size="lg" className="btn btn-primary btn-lg btn-block" block>Roll</Button> 
@@ -51,7 +50,7 @@ export default class Dice extends Component {
                             <h4 style={{width: "100%"}} >1D{this.state.diceSize} + </h4>
                         </Col>
                         <Col md={{span: 1}}>
-                            <input type="number" value={this.state.inputValue} onChange={this._handleUpdate} step="any" style={{width: "100%", height: '80%'}}/>
+                            <input type="number" value={this.state.inputValue} onChange={this.handleUpdate} step="any" style={{width: "100%", height: '80%'}}/>
                         </Col>
                         <Col md={{span: 2}}>
                             <h2>= {this.state.finalResult}</h2> 

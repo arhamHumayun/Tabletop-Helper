@@ -11,7 +11,7 @@ export default class DicePage extends Component {
             <div>
             <Container fluid={true}>
               <Row>
-                <Col md={10} style={{border: '1px solid red'}}>
+                <Col md={10} >
                   <ListGroup variant="flush">
                     <ListGroup.Item >
                       <Dice diceSize={100}/>
