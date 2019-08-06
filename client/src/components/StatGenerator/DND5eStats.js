@@ -72,7 +72,13 @@ export default class DND5eStats extends Component {
                 <ButtonToolbar aria-label="Toolbar with button groups">
                 <div style={{width: '38%'}}></div>
                     <ButtonGroup>
-                        <Button variant="primary" onClick={this.generate4D6DL}>4D6 drop lowest</Button>
+                        <OverlayTrigger key='left ' placement='left' overlay={
+                            <Tooltip id={`tooltip-${'left'}`}>
+                                Most common way of rolling for stats
+                            </Tooltip>
+                        }>
+                            <Button variant="primary" onClick={this.generate4D6DL}>4D6 drop lowest</Button>
+                        </OverlayTrigger>
                         <Button variant="primary" onClick={this.generate3D6}>3D6</Button>
                         <Button variant="primary" onClick={this.generate2D6plus6}>2D6 + 6</Button>
                     </ButtonGroup> 

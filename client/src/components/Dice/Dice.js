@@ -8,20 +8,19 @@ export default class Dice extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            diceSize: props.diceSize,
             result: 0,
             finalResult: 0,
             inputValue: "0"
         }
 
         this.roll = this.roll.bind(this);
-        this._handleUpdate = this.handleUpdate.bind(this);
-        this._reset = this.reset.bind(this);
+        this.handleUpdate = this.handleUpdate.bind(this);
+        this.reset = this.reset.bind(this);
     }
 
     roll() {
         this.setState(state => ({
-            result: Math.floor(Math.random() * this.state.diceSize) + 1
+            result: Math.floor(Math.random() * this.props.diceSize) + 1
         }))
         this.setState(state => ({
             finalResult: parseInt(this.state.inputValue, 10) + this.state.result
@@ -47,7 +46,7 @@ export default class Dice extends Component {
                             <Button variant="primary" onClick={this.roll} size="lg" className="btn btn-primary btn-lg btn-block" block>Roll</Button> 
                         </Col >
                         <Col md={{span: 2}}>
-                            <h4 style={{width: "100%"}} >1D{this.state.diceSize} + </h4>
+                            <h4 style={{width: "100%"}} >1D{this.props.diceSize} + </h4>
                         </Col>
                         <Col md={{span: 1}}>
                             <input type="number" value={this.state.inputValue} onChange={this.handleUpdate} step="any" style={{width: "100%", height: '80%'}}/>
