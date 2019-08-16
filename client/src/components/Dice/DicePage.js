@@ -44,6 +44,9 @@ export default class DicePage extends Component {
                 </Col>
               </Row>
             </Container>
+            <div>
+              yeet?
+            </div>
             </div>
         )
     }

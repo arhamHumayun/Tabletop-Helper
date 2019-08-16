@@ -8,11 +8,11 @@ export default class AppHeader extends Component {
         return (
         <Navbar bg="dark" variant="dark" expand="md">
             <Navbar.Brand href="/">Tabletop Helper</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="/dice">Roll Dice</Nav.Link>
-              <NavDropdown title="Generate Stats" id="basic-nav-dropdown">
+              <NavDropdown title="Generate Stats" id="collapsible-nav-dropdown">
                 <NavDropdown.Item href="/generate/dnd">DnD 5e</NavDropdown.Item>
                 <NavDropdown.Item href="/generate/coc">Call of Cthulu 7e</NavDropdown.Item>
                 <NavDropdown.Item href="/generate/pf">Pathfinder 2e</NavDropdown.Item>
