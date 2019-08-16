@@ -16,31 +16,41 @@ export default class CoCStats extends Component {
 
     generateStandard() {
             var results = [0, 0, 0]
+            var statArray = []; 
+            var rollsArray = [];
             for(var i = 0; i < 6; i++) {
                 results = [0, 0, 0]
                 for(var j = 0; j < 3; j++) {
                     results[j] = Math.floor((Math.random() * 6) + 1)
                 }
-                this.state.statArray[i] = (results[0] + results[1] + results[2]) * 5
-                this.state.rollsArray[i] = "(" + results[0] + " + " + results[1] + " + " + results[2] + ") * 5"
+                statArray[i] = (results[0] + results[1] + results[2]) * 5
+                rollsArray[i] = "(" + results[0] + " + " + results[1] + " + " + results[2] + ") * 5"
             }
             for(i = 0; i < 3; i++) {
                 results = [0, 0]
                 for(j = 0; j < 2; j++) {
                     results[j] = Math.floor((Math.random() * 6) + 1)
                 }
-                this.state.statArray[i + 6] = (results[0] + results[1] + 6) * 5
-                this.state.rollsArray[i + 6] = "(" + results[0] + " + " + results[1] + " + (6)) * 5"
+                statArray[i + 6] = (results[0] + results[1] + 6) * 5
+                rollsArray[i + 6] = "(" + results[0] + " + " + results[1] + " + (6)) * 5"
             }
-            this.forceUpdate()
+            this.setState(state => ({
+                statArray: statArray,
+                rollsArray: rollsArray
+            }))
     }
 
     generate1D100() {
+        var statArray = []; 
+        var rollsArray = [];
         for(var i = 0; i < 9; i++) {
-            this.state.statArray[i] = Math.floor((Math.random() * 100) + 1)
-            this.state.rollsArray[i] = this.state.statArray[i]
+            statArray[i] = Math.floor((Math.random() * 100) + 1)
+            rollsArray[i] = this.state.statArray[i]
         }
-        this.forceUpdate()
+        this.setState(state => ({
+            statArray: statArray,
+            rollsArray: rollsArray
+        }))
     }
 
     render() {

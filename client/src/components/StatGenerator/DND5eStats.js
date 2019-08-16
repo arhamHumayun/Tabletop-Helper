@@ -21,42 +21,57 @@ export default class DND5eStats extends Component {
 
     generate4D6DL() {
             var results = [0, 0, 0, 0]
+            var statArray = []
+            var rollsArray = []
             for(var i = 0; i < 6; i++) {
                 results = [0, 0, 0, 0]
                 for(var j = 0; j < 4; j++) {
                     results[j] = Math.floor((Math.random() * 6) + 1)
                 }
                 results.sort()
-                this.state.statArray[i] = results[1] + results[2] + results[3]
-                this.state.rollsArray[i] = results[0] + " | " + results[1] + " + " + results[2] + " + " + results[3]
+                statArray[i] = results[1] + results[2] + results[3]
+                rollsArray[i] = results[0] + " | " + results[1] + " + " + results[2] + " + " + results[3]
             }
-            this.forceUpdate()
+            this.setState(state => ({
+                statArray: statArray,
+                rollsArray: rollsArray
+            }))
     }
 
     generate3D6() {
         var results = [0, 0, 0]
+        var statArray = []
+        var rollsArray = []
         for(var i = 0; i < 6; i++) {
             results = [0, 0, 0]
             for(var j = 0; j < 3; j++) {
                 results[j] = Math.floor((Math.random() * 6) + 1)
             }
-            this.state.statArray[i] = results[0] + results[1] + results[2]
-            this.state.rollsArray[i] = results[0] + " + " + results[1] + " + " + results[2]
+            statArray[i] = results[0] + results[1] + results[2]
+            rollsArray[i] = results[0] + " + " + results[1] + " + " + results[2]
         }
-        this.forceUpdate()
+        this.setState(state => ({
+            statArray: statArray,
+            rollsArray: rollsArray
+        }))
     }
 
     generate2D6plus6() {
         var results = [0, 0]
+        var statArray = []
+        var rollsArray = []
         for(var i = 0; i < 6; i++) {
             results = [0, 0]
             for(var j = 0; j < 2; j++) {
                 results[j] = Math.floor((Math.random() * 6) + 1)
             }
-            this.state.statArray[i] = results[0] + results[1] + 6
-            this.state.rollsArray[i] = results[0] + " + " + results[1] + " + 6"
+            statArray[i] = results[0] + results[1] + 6
+            rollsArray[i] = results[0] + " + " + results[1] + " + 6"
         }
-        this.forceUpdate()
+        this.setState(state => ({
+            statArray: statArray,
+            rollsArray: rollsArray
+        }))
     }
 
     showStandardArray() {
