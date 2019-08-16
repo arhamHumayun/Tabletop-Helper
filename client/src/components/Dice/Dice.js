@@ -10,48 +10,65 @@ export default class Dice extends Component {
         this.state = {
             result: 0,
             finalResult: 0,
+            multiple: "1",
             inputValue: "0"
         }
 
         this.roll = this.roll.bind(this);
-        this.handleUpdate = this.handleUpdate.bind(this);
+        this.changeMod = this.changeMod.bind(this);
+        this.changeMultiple = this.changeMultiple.bind(this);
         this.reset = this.reset.bind(this);
     }
 
     roll() {
+        let total = 0;
+
+        for(let i = 0; i < this.state.multiple; i++) {
+            total += Math.floor(Math.random() * this.props.diceSize) + 1
+        }
+
         this.setState(state => ({
-            result: Math.floor(Math.random() * this.props.diceSize) + 1
+            result: total
         }))
         this.setState(state => ({
             finalResult: parseInt(this.state.inputValue, 10) + this.state.result
         }))
     }
 
-    handleUpdate(e) {
+    changeMod(e) {
         if (e.target.validity.valid) {
-          this.setState({ inputValue: e.target.value }); 
+            this.setState({ inputValue: e.target.value }); 
         }
-      }
+    }
     
+    changeMultiple(e)  {
+        if (e.target.validity.valid) {
+            this.setState({ multiple: e.target.value }); 
+        }
+    }
+
     reset() {
         this.setState({ inputValue: "0" }); 
-      }
+    }
 
     render() {
         return (
             <React.Fragment>
                 <Container>
                     <Row style={{}} >
-                        <Col md={{span: 1.5}}>
+                        <Col>
                             <Button variant="primary" onClick={this.roll} size="lg" className="btn btn-primary btn-lg btn-block" block>Roll</Button> 
-                        </Col >
-                        <Col md={{span: 2}}>
-                            <h4 style={{width: "100%"}} >1D{this.props.diceSize} + </h4>
                         </Col>
-                        <Col md={{span: 1}}>
-                            <input type="number" value={this.state.inputValue} onChange={this.handleUpdate} step="any" style={{width: "100%", height: '80%'}}/>
+                        <Col>
+                            <input type="number" value={this.state.multiple} onChange={this.changeMultiple} step="any" style={{width: "100%", height: '80%'}}/>
                         </Col>
-                        <Col md={{span: 2}}>
+                        <Col>
+                            <h3 style={{width: "100%"}} >D{this.props.diceSize} + </h3>
+                        </Col>
+                        <Col>
+                            <input type="number" value={this.state.inputValue} onChange={this.changeMod} step="any" style={{width: "100%", height: '80%'}}/>
+                        </Col>
+                        <Col>
                             <h3>= {this.state.finalResult}</h3> 
                         </Col>
                     </Row>

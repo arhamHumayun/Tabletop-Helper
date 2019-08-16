@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col'
 export default class DicePage extends Component {
     render() {
         return (
-            <div>
+            <div style={{ width: '70%'}}>
             <Container fluid={true}>
               <Row>
                 <Col md={10} >
@@ -41,9 +41,6 @@ export default class DicePage extends Component {
                       <Dice diceSize={2}/>
                     </ListGroup.Item>
                   </ListGroup>
-                </Col>
-                <Col>
-                  roll log
                 </Col>
               </Row>
             </Container>

@@ -6,8 +6,10 @@ import React, { Component } from 'react';
 export default class AppHeader extends Component {
     render() {
         return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" expand="md">
             <Navbar.Brand href="/">Tabletop Helper</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="/dice">Roll Dice</Nav.Link>
               <NavDropdown title="Generate Stats" id="basic-nav-dropdown">
@@ -22,6 +24,7 @@ export default class AppHeader extends Component {
             <Nav>
               <Nav.Link href="/about" inline>About</Nav.Link>
             </Nav>
+            </Navbar.Collapse>
         </Navbar>
         )
     }
