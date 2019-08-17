@@ -8,10 +8,10 @@ import Col from 'react-bootstrap/Col'
 export default class DicePage extends Component {
     render() {
         return (
-            <div style={{ width: '70%'}}>
+            <div style={{ width: ''}}>
             <Container fluid={true}>
               <Row>
-                <Col md={10} >
+                <Col>
                   <ListGroup variant="flush">
                     <ListGroup.Item >
                       <Dice diceSize={100}/>
@@ -44,9 +44,6 @@ export default class DicePage extends Component {
                 </Col>
               </Row>
             </Container>
-            <div>
-              yeet?
-            </div>
             </div>
         )
     }

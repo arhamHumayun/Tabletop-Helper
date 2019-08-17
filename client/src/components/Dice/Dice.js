@@ -8,6 +8,7 @@ export default class Dice extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            rolls: [],
             result: 0,
             finalResult: 0,
             multiple: "1",
@@ -22,16 +23,30 @@ export default class Dice extends Component {
 
     roll() {
         let total = 0;
+        let rolls = [];
+        let finalResult = 0;
 
         for(let i = 0; i < this.state.multiple; i++) {
-            total += Math.floor(Math.random() * this.props.diceSize) + 1
+            rolls[i] = Math.floor(Math.random() * this.props.diceSize) + 1
         }
 
+        for (var i in rolls)
+            total += rolls[i];
+
+        finalResult = parseInt(this.state.inputValue, 10) + total
+        
+        for (i = 0; i < rolls.length - 1; i++) {
+            rolls[i] = rolls[i] + " + "
+        }
+
+        console.log(rolls)
+        console.log(total)
+        
+
         this.setState(state => ({
-            result: total
-        }))
-        this.setState(state => ({
-            finalResult: parseInt(this.state.inputValue, 10) + this.state.result
+            result: total,
+            finalResult: finalResult,
+            rolls: rolls
         }))
     }
 
@@ -69,7 +84,7 @@ export default class Dice extends Component {
                             <input type="number" value={this.state.inputValue} onChange={this.changeMod} step="any" style={{width: "100%", height: '80%'}}/>
                         </Col>
                         <Col>
-                            <h3>= {this.state.finalResult}</h3> 
+                            <p>({this.state.rolls}) + {this.state.inputValue}</p><h3> {this.state.finalResult}</h3> 
                         </Col>
                     </Row>
                 </Container>
