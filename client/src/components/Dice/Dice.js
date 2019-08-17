@@ -39,10 +39,6 @@ export default class Dice extends Component {
             rolls[i] = rolls[i] + " + "
         }
 
-        console.log(rolls)
-        console.log(total)
-        
-
         this.setState(state => ({
             result: total,
             finalResult: finalResult,
@@ -72,19 +68,22 @@ export default class Dice extends Component {
                 <Container>
                     <Row style={{}} >
                         <Col>
-                            <Button variant="primary" onClick={this.roll} size="lg" className="btn btn-primary btn-lg btn-block" block>Roll</Button> 
+                            <Button variant="primary" onClick={this.roll} size="xl" className="btn btn-primary btn-lg btn-block" block>Roll</Button> 
                         </Col>
                         <Col>
                             <input type="number" value={this.state.multiple} onChange={this.changeMultiple} step="any" style={{width: "100%", height: '80%'}}/>
                         </Col>
                         <Col>
-                            <h3 style={{width: "100%"}} >D{this.props.diceSize} + </h3>
+                            <h3 style={{width: "100%"}} >D{this.props.diceSize} +</h3>
                         </Col>
                         <Col>
                             <input type="number" value={this.state.inputValue} onChange={this.changeMod} step="any" style={{width: "100%", height: '80%'}}/>
                         </Col>
                         <Col>
-                            <p>({this.state.rolls}) + {this.state.inputValue}</p><h3> {this.state.finalResult}</h3> 
+                            <h5>({this.state.rolls}) + {this.state.inputValue}</h5> 
+                        </Col>
+                        <Col>
+                            <h3>{this.state.finalResult}</h3>
                         </Col>
                     </Row>
                 </Container>

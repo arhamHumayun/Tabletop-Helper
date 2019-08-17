@@ -22,6 +22,7 @@ export default class AppHeader extends Component {
               <Nav.Link href="/curations">Curations</Nav.Link>
             </Nav>
             <Nav>
+              <Nav.Link href="https://github.com/arhamHumayun/Tabletop-Helper">Github</Nav.Link>
               <Nav.Link href="/about" inline>About</Nav.Link>
             </Nav>
             </Navbar.Collapse>
