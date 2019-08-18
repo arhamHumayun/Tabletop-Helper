@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col'
 export default class DicePage extends Component {
     render() {
         return (
-            <div style={{ width: ''}}>
+            <div style={{ width: '100%'}}>
             <Container fluid={true}>
               <Row>
                 <Col>

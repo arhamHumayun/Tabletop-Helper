@@ -64,30 +64,50 @@ export default class Dice extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <Container>
-                    <Row style={{}} >
-                        <Col>
-                            <Button variant="primary" onClick={this.roll} size="xl" className="btn btn-primary btn-lg btn-block" block>Roll</Button> 
+                <Container style={{
+                    left: '0px',
+                    position: 'left',
+                    display: 'contents'                
+                    }}>
+                    <Row>
+                        <Col sm={2} >
+                            <Button variant="primary" onClick={this.roll} size="lg" className="btn btn-primary btn-lg btn-block" block>Roll</Button> 
                         </Col>
-                        <Col>
-                            <input type="number" value={this.state.multiple} onChange={this.changeMultiple} step="any" style={{width: "100%", height: '80%'}}/>
+                        <Col sm={1} style={{padding: '0'}}>
+                            <input
+                            type="number" value={this.state.multiple} 
+                            onChange={this.changeMultiple} step="any" 
+                            style={{
+                                width: '100%', 
+                                height: '85%',
+                                display: 'inline',
+                                fontSize: '20px'
+                                }}/>
                         </Col>
-                        <Col>
-                            <h3 style={{width: "100%"}} >D{this.props.diceSize} +</h3>
+                        <Col sm={2} style={{padding: '0'}}>
+                            <h3 style={{padding: '0'}}>D{this.props.diceSize} +</h3>
                         </Col>
-                        <Col>
-                            <input type="number" value={this.state.inputValue} onChange={this.changeMod} step="any" style={{width: "100%", height: '80%'}}/>
+                        <Col sm={1} style={{padding: '0'}}>
+                            <input 
+                            type="number" 
+                            value={this.state.inputValue} 
+                            onChange={this.changeMod} 
+                            step="any" 
+                            style={{
+                                width: '100%', 
+                                height: '85%',
+                                display: 'inline',
+                                fontSize: '20px'
+                                }}/>
                         </Col>
-                        <Col>
-                            <h5>({this.state.rolls}) + {this.state.inputValue}</h5> 
+                        <Col sm={3} >
+                            <h5>= ({this.state.rolls}) + {this.state.inputValue} =</h5> 
                         </Col>
-                        <Col>
+                        <Col sm={3} >
                             <h3>{this.state.finalResult}</h3>
                         </Col>
                     </Row>
                 </Container>
-            </React.Fragment>
         )
     }
 }
