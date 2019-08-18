@@ -81,10 +81,10 @@ export default class Dice extends Component {
                                 width: '100%', 
                                 height: '85%',
                                 display: 'inline',
-                                fontSize: '20px'
+                                fontSize: '20px'                                
                                 }}/>
                         </Col>
-                        <Col sm={2} style={{padding: '0'}}>
+                        <Col sm={2} style={{padding: '0', 'text-align': 'left'}}>
                             <h3 style={{padding: '0'}}>D{this.props.diceSize} +</h3>
                         </Col>
                         <Col sm={1} style={{padding: '0'}}>
