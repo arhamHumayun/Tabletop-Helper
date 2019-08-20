@@ -19,6 +19,9 @@ export default class AppHeader extends Component {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/pointbuy/dnd">Dnd 5e Point Buy</NavDropdown.Item>
               </NavDropdown>
+              <NavDropdown title="Run Combat" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="/combat/cp">CyberPunk2020</NavDropdown.Item>
+              </NavDropdown>
               <Nav.Link href="/curations">Curations</Nav.Link>
             </Nav>
             <Nav>

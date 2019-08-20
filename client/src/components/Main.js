@@ -6,6 +6,7 @@ import SplashScreen from './SplashScreen';
 import DND5eStats from './StatGenerator/DND5eStats';
 import CoCStats from './StatGenerator/CoCStats';
 import Curations from './Curations'
+import CyberpunkWrapper from './Combat/CyberpunkWrapper'
 
 const Main = () => (
     <main style={{height: '100%'}} >
@@ -16,6 +17,7 @@ const Main = () => (
             <Route exact path ='/generate/dnd' component={DND5eStats}/>
             <Route exact path ='/generate/coc' component={CoCStats}/>
             <Route exact path ='/curations' component={Curations}/>
+            <Route exact path ='/combat/cp' component={CyberpunkWrapper}/>
         </Switch>
     </main>
 )
