@@ -25,7 +25,6 @@ export default class CyberpunkCombat extends Component {
         body = Math.floor(Math.random() * 10) + 1
 
         for(var i = 0; i < this.props.numDice; i++) {
-            results[i] = new Array(this.props.numDice)
             results[i] = Math.floor(Math.random() * this.props.diceSize) + 1
             rolls += results[i]
         }
