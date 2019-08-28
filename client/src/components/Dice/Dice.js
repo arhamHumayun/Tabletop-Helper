@@ -70,7 +70,7 @@ export default class Dice extends Component {
                     display: 'contents'                
                     }}>
                     <Row>
-                        <Col sm={2} >
+                        <Col sm={1} >
                             <Button variant="primary" onClick={this.roll} size="lg" className="btn btn-primary btn-lg btn-block" block>Roll</Button> 
                         </Col>
                         <Col sm={1} style={{padding: '0'}}>
@@ -100,7 +100,7 @@ export default class Dice extends Component {
                                 fontSize: '20px'
                                 }}/>
                         </Col>
-                        <Col sm={3} >
+                        <Col sm={4} >
                             <h5>= ({this.state.rolls}) + {this.state.inputValue} =</h5> 
                         </Col>
                         <Col sm={3} >
