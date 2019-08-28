@@ -92,10 +92,10 @@ export default class DND5eStats extends Component {
                                 Most common way of rolling for stats
                             </Tooltip>
                         }>
-                            <Button variant="primary" onClick={this.generate4D6DL}>4D6 drop lowest</Button>
+                            <Button variant="success" onClick={this.generate4D6DL}>4D6 drop lowest</Button>
                         </OverlayTrigger>
-                        <Button variant="primary" onClick={this.generate3D6}>3D6</Button>
-                        <Button variant="primary" onClick={this.generate2D6plus6}>2D6 + 6</Button>
+                        <Button variant="secondary" onClick={this.generate3D6}>3D6</Button>
+                        <Button variant="secondary" onClick={this.generate2D6plus6}>2D6 + 6</Button>
                     </ButtonGroup> 
                     <div style={{width: '1%'}}></div>
                     <ButtonGroup>

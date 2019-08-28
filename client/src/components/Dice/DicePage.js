@@ -51,7 +51,7 @@ export default class DicePage extends Component {
             <Dice diceSize={item.diceSize}/>
           </Col>
           <Col sm={1} style={{padding: '0'}}>
-            <Button onClick={() => this.removeItem(item.id)}>X</Button>  
+            <Button variant="danger" onClick={() => this.removeItem(item.id)}>X</Button>  
           </Col>
         </Row>
       </Container> 
