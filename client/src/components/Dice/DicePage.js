@@ -5,6 +5,9 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import uuid from "uuid";
 
 export default class DicePage extends Component {
 
@@ -12,18 +15,22 @@ export default class DicePage extends Component {
     super(props);
     this.state = {
       items: [
-        {diceSize: 100, id: 1001},
-        {diceSize: 20, id: 201}, 
-        {diceSize: 6, id: 61}, 
-        {diceSize: 2, id: 21},  
+        {diceSize: 20, id: uuid()}, 
+        {diceSize: 12, id: uuid()},
+        {diceSize: 10, id: uuid()}, 
+        {diceSize: 8, id: uuid()}, 
+        {diceSize: 6, id: uuid()}, 
+        {diceSize: 4, id: uuid()}, 
       ]
     }
     this.removeItem = this.removeItem.bind(this)
     this.addItem = this.addItem.bind(this)
   }
 
-  addItem(diceSize, id) {
-
+  addItem(diceSize) {
+    this.setState({
+      items:[...this.state.items, {diceSize: diceSize, id: uuid()}]
+    });
   }
   
   removeItem(e) {
@@ -32,7 +39,7 @@ export default class DicePage extends Component {
   }
 
   render() {
-    const listItems = this.state.items.map((item) =>
+    let listItems = this.state.items.map((item) =>
       <ListGroup.Item> 
       <Container style={{
         left: '0px',
@@ -53,6 +60,23 @@ export default class DicePage extends Component {
     console.log(listItems)
        return (
             <div style={{ width: '100%'}}>
+            <ButtonToolbar>
+              <div style={{width: '33%'}}></div>
+              <ButtonGroup>
+                <Button onClick={() => this.addItem(1000)}>D1000</Button>
+                <Button onClick={() => this.addItem(500)}>D500</Button>
+                <Button onClick={() => this.addItem(100)}>D100</Button>
+                <Button onClick={() => this.addItem(50)}>D50</Button>
+                <Button onClick={() => this.addItem(20)}>D20</Button>
+                <Button onClick={() => this.addItem(12)}>D12</Button>
+                <Button onClick={() => this.addItem(10)}>D10</Button>
+                <Button onClick={() => this.addItem(8)}>D8</Button>
+                <Button onClick={() => this.addItem(6)}>D6</Button>
+                <Button onClick={() => this.addItem(4)}>D4</Button>
+                <Button onClick={() => this.addItem(3)}>D3</Button>
+                <Button onClick={() => this.addItem(2)}>D2</Button>
+              </ButtonGroup>
+            </ButtonToolbar>
             <Container fluid={true}>
               <Row>
                 <Col>
