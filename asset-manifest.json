@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Tabletop-Helper/static/css/main.75605f60.chunk.css",
-    "main.js": "/Tabletop-Helper/static/js/main.9ff78280.chunk.js",
-    "main.js.map": "/Tabletop-Helper/static/js/main.9ff78280.chunk.js.map",
+    "main.js": "/Tabletop-Helper/static/js/main.c3417892.chunk.js",
+    "main.js.map": "/Tabletop-Helper/static/js/main.c3417892.chunk.js.map",
     "runtime~main.js": "/Tabletop-Helper/static/js/runtime~main.8b0ff4a7.js",
     "runtime~main.js.map": "/Tabletop-Helper/static/js/runtime~main.8b0ff4a7.js.map",
     "static/css/2.22a7d4ef.chunk.css": "/Tabletop-Helper/static/css/2.22a7d4ef.chunk.css",
     "static/js/2.9cb94308.chunk.js": "/Tabletop-Helper/static/js/2.9cb94308.chunk.js",
     "static/js/2.9cb94308.chunk.js.map": "/Tabletop-Helper/static/js/2.9cb94308.chunk.js.map",
     "index.html": "/Tabletop-Helper/index.html",
-    "precache-manifest.341e5791075a2eb09258f9378088e894.js": "/Tabletop-Helper/precache-manifest.341e5791075a2eb09258f9378088e894.js",
+    "precache-manifest.d91ca95ee86010137a04c45102819d4f.js": "/Tabletop-Helper/precache-manifest.d91ca95ee86010137a04c45102819d4f.js",
     "service-worker.js": "/Tabletop-Helper/service-worker.js",
     "static/css/2.22a7d4ef.chunk.css.map": "/Tabletop-Helper/static/css/2.22a7d4ef.chunk.css.map",
     "static/css/main.75605f60.chunk.css.map": "/Tabletop-Helper/static/css/main.75605f60.chunk.css.map"
