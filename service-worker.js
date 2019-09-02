@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Tabletop-Helper/precache-manifest.8290a29c902515a4238e926791caccf3.js"
+  "/Tabletop-Helper/precache-manifest.a0d97689a92f0c5dd6e6946e9100b430.js"
 );
 
 self.addEventListener('message', (event) => {
