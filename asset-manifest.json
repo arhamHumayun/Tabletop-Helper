@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "arhamHumayun.github.io/static/css/main.75605f60.chunk.css",
-    "main.js": "arhamHumayun.github.io/static/js/main.5fd9e773.chunk.js",
-    "main.js.map": "arhamHumayun.github.io/static/js/main.5fd9e773.chunk.js.map",
-    "runtime~main.js": "arhamHumayun.github.io/static/js/runtime~main.74428b3f.js",
-    "runtime~main.js.map": "arhamHumayun.github.io/static/js/runtime~main.74428b3f.js.map",
-    "static/css/2.22a7d4ef.chunk.css": "arhamHumayun.github.io/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.9cb94308.chunk.js": "arhamHumayun.github.io/static/js/2.9cb94308.chunk.js",
-    "static/js/2.9cb94308.chunk.js.map": "arhamHumayun.github.io/static/js/2.9cb94308.chunk.js.map",
-    "index.html": "arhamHumayun.github.io/index.html",
-    "precache-manifest.e63bd33a464fceda3e03a586c65141a1.js": "arhamHumayun.github.io/precache-manifest.e63bd33a464fceda3e03a586c65141a1.js",
-    "service-worker.js": "arhamHumayun.github.io/service-worker.js",
-    "static/css/2.22a7d4ef.chunk.css.map": "arhamHumayun.github.io/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.75605f60.chunk.css.map": "arhamHumayun.github.io/static/css/main.75605f60.chunk.css.map"
+    "main.css": "/Tabletop-Helper/static/css/main.75605f60.chunk.css",
+    "main.js": "/Tabletop-Helper/static/js/main.9278031f.chunk.js",
+    "main.js.map": "/Tabletop-Helper/static/js/main.9278031f.chunk.js.map",
+    "runtime~main.js": "/Tabletop-Helper/static/js/runtime~main.8b0ff4a7.js",
+    "runtime~main.js.map": "/Tabletop-Helper/static/js/runtime~main.8b0ff4a7.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/Tabletop-Helper/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.9cb94308.chunk.js": "/Tabletop-Helper/static/js/2.9cb94308.chunk.js",
+    "static/js/2.9cb94308.chunk.js.map": "/Tabletop-Helper/static/js/2.9cb94308.chunk.js.map",
+    "index.html": "/Tabletop-Helper/index.html",
+    "precache-manifest.ad4dd61786e17ba4a021780e27085c0c.js": "/Tabletop-Helper/precache-manifest.ad4dd61786e17ba4a021780e27085c0c.js",
+    "service-worker.js": "/Tabletop-Helper/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/Tabletop-Helper/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.75605f60.chunk.css.map": "/Tabletop-Helper/static/css/main.75605f60.chunk.css.map"
   }
 }
