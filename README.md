@@ -1,4 +1,4 @@
 # Tabletop-Helper
 
-A website which will contain a number of tools useful in many TTRPGs
-(Not yet deployed)
+Site is currently up and running at https://arhamHumayun.github.io/Tabletop-Helper
+

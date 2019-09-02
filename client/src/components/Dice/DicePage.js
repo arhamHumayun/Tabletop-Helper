@@ -61,7 +61,7 @@ export default class DicePage extends Component {
        return (
             <div style={{ width: '100%'}}>
             <ButtonToolbar>
-              <div style={{width: '33%'}}></div>
+              <div style={{width: '30%'}}></div>
               <ButtonGroup>
                 <Button onClick={() => this.addItem(1000)}>D1000</Button>
                 <Button onClick={() => this.addItem(500)}>D500</Button>
