@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "arhamhumayun.github.io/Tabletop-Helper/static/css/main.75605f60.chunk.css",
-    "main.js": "arhamhumayun.github.io/Tabletop-Helper/static/js/main.49ac11a0.chunk.js",
-    "main.js.map": "arhamhumayun.github.io/Tabletop-Helper/static/js/main.49ac11a0.chunk.js.map",
-    "runtime~main.js": "arhamhumayun.github.io/Tabletop-Helper/static/js/runtime~main.611688a9.js",
-    "runtime~main.js.map": "arhamhumayun.github.io/Tabletop-Helper/static/js/runtime~main.611688a9.js.map",
-    "static/css/2.22a7d4ef.chunk.css": "arhamhumayun.github.io/Tabletop-Helper/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.9cb94308.chunk.js": "arhamhumayun.github.io/Tabletop-Helper/static/js/2.9cb94308.chunk.js",
-    "static/js/2.9cb94308.chunk.js.map": "arhamhumayun.github.io/Tabletop-Helper/static/js/2.9cb94308.chunk.js.map",
-    "index.html": "arhamhumayun.github.io/Tabletop-Helper/index.html",
-    "precache-manifest.a238133bef2faf3f9937fc4ee9089292.js": "arhamhumayun.github.io/Tabletop-Helper/precache-manifest.a238133bef2faf3f9937fc4ee9089292.js",
-    "service-worker.js": "arhamhumayun.github.io/Tabletop-Helper/service-worker.js",
-    "static/css/2.22a7d4ef.chunk.css.map": "arhamhumayun.github.io/Tabletop-Helper/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.75605f60.chunk.css.map": "arhamhumayun.github.io/Tabletop-Helper/static/css/main.75605f60.chunk.css.map"
+    "main.css": "arhamHumayun.github.io/static/css/main.75605f60.chunk.css",
+    "main.js": "arhamHumayun.github.io/static/js/main.5fd9e773.chunk.js",
+    "main.js.map": "arhamHumayun.github.io/static/js/main.5fd9e773.chunk.js.map",
+    "runtime~main.js": "arhamHumayun.github.io/static/js/runtime~main.74428b3f.js",
+    "runtime~main.js.map": "arhamHumayun.github.io/static/js/runtime~main.74428b3f.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "arhamHumayun.github.io/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.9cb94308.chunk.js": "arhamHumayun.github.io/static/js/2.9cb94308.chunk.js",
+    "static/js/2.9cb94308.chunk.js.map": "arhamHumayun.github.io/static/js/2.9cb94308.chunk.js.map",
+    "index.html": "arhamHumayun.github.io/index.html",
+    "precache-manifest.e63bd33a464fceda3e03a586c65141a1.js": "arhamHumayun.github.io/precache-manifest.e63bd33a464fceda3e03a586c65141a1.js",
+    "service-worker.js": "arhamHumayun.github.io/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "arhamHumayun.github.io/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.75605f60.chunk.css.map": "arhamHumayun.github.io/static/css/main.75605f60.chunk.css.map"
   }
 }
