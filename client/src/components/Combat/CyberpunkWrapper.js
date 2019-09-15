@@ -55,7 +55,6 @@ export default class CyberpunkWrapper extends Component {
                     </Button>
                 </Modal.Footer>
             </Modal>
-
             <CyberpunkCombat numDice={6} damageBonus={2} diceSize={6}/>
             <CyberpunkCombat numDice={4} damageBonus={1} diceSize={6}/>
             </div>

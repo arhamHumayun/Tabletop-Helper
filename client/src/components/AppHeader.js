@@ -12,18 +12,18 @@ export default class AppHeader extends Component {
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="/Tabletop-Helper/#/dice">Roll Dice</Nav.Link>
-              <NavDropdown title="Generate Stats" id="collapsible-nav-dropdown">
+              <NavDropdown title="Generate Stats" id="basic-nav-dropdown" >
                 <NavDropdown.Item href="/Tabletop-Helper/#/generate/dnd">DnD 5e</NavDropdown.Item>
                 <NavDropdown.Item href="/Tabletop-Helper/#/generate/coc">Call of Cthulu 7e</NavDropdown.Item>
                 <NavDropdown.Item href="/Tabletop-Helper/#/generate/pf">Pathfinder 2e</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/Tabletop-Helper/#/pointbuy/dnd">Dnd 5e Point Buy</NavDropdown.Item>
+                <NavDropdown.Item href="http://chicken-dinner.com/5e/5e-point-buy.html" target="_new">Dnd 5e Point Buy</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="/Tabletop-Helper/#/curations">Curations</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="https://github.com/arhamHumayun/Tabletop-Helper">Github</Nav.Link>
-              <Nav.Link href="/Tabletop-Helper/#/about" inline>About</Nav.Link>
+              <Nav.Link href="https://github.com/arhamHumayun/Tabletop-Helper" target="_new">My Github</Nav.Link>
+              <Nav.Link href="/Tabletop-Helper/#/about" inline>About Me</Nav.Link>
             </Nav>
             </Navbar.Collapse>
         </Navbar>
